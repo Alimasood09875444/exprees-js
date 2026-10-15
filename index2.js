@@ -1,14 +1,18 @@
 /* const exprees = require ("express"); */
 import exprees from "express";
 import home from "./pages/home.js";
-import contact from "./pages/contact.js";
+import Submit from "./pages/submit.js";
+import login from "./pages/login.js";
 const Port = 6700;
 const app= exprees();
 app.get("",(req,res)=>{
   res.send(home())
 })
-app.get("/contact",(req,res)=>{
-  res.send(contact())
+app.get("/login",(req,res)=>{
+  res.send(login())
+})
+app.post("/submit",(req,res)=>{
+  res.send(Submit())
 })
 app.listen(Port,()=>{
   console.log(`server is running on http://localhost:${Port}`);
