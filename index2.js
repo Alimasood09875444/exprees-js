@@ -1,20 +1,13 @@
-/* const exprees = require ("express"); */
-import exprees from "express";
-import home from "./pages/home.js";
-import Submit from "./pages/submit.js";
-import login from "./pages/login.js";
-const Port = 6700;
-const app= exprees();
-app.get("",(req,res)=>{
-  res.send(home())
+import express from "express";
+const port = 5600
+const app = express();
+app.get("/",(req,res)=>{
+  res.send("Home Page")
 })
 app.get("/login",(req,res)=>{
-  res.send(login())
+  res.send("login Page")
 })
-app.post("/submit",(req,res)=>{
-  res.send(Submit())
-})
-app.listen(Port,()=>{
-  console.log(`server is running on http://localhost:${Port}`);
+app.listen(port,()=>{
+  console.log(`Server is running on http://localhost:${port}`);
   
 })
