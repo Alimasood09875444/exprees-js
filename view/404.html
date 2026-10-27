@@ -1,0 +1,194 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 25px;
+            overflow-x: hidden;
+            background: linear-gradient(
+                135deg,
+                #873ff0,
+                #4920d9,
+                #3213b7
+            );
+            position: relative;
+        }
+
+        /* Background decorations */
+        body::before,
+        body::after {
+            content: "";
+            position: fixed;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.12);
+            z-index: -1;
+        }
+
+        body::before {
+            width: 130px;
+            height: 130px;
+            top: 10%;
+            left: 5%;
+        }
+
+        body::after {
+            width: 60px;
+            height: 60px;
+            top: 25%;
+            right: 8%;
+        }
+
+        /* Main card */
+        .container {
+            width: 100%;
+            max-width: 850px;
+            background: #fff;
+            text-align: center;
+            padding: 45px 30px;
+            border-radius: 25px;
+            box-shadow: 0 25px 60px rgba(20, 0, 80, 0.3);
+        }
+
+        /* 404 heading */
+        .error-code {
+            font-size: clamp(100px, 20vw, 220px);
+            font-weight: 900;
+            line-height: 1;
+            letter-spacing: 5px;
+            margin-bottom: 30px;
+            background: linear-gradient(
+                135deg,
+                #9252ff,
+                #4320d8
+            );
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .emoji {
+            display: inline-block;
+            font-size: 0.45em;
+            vertical-align: middle;
+        }
+
+        h2 {
+            font-size: clamp(24px, 4vw, 40px);
+            color: #171b32;
+            margin-bottom: 22px;
+        }
+
+        p {
+            color: #697187;
+            font-size: 18px;
+            line-height: 1.8;
+            max-width: 550px;
+            margin: 0 auto 30px;
+        }
+
+        /* Home button */
+        .home-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            padding: 18px 32px;
+            background: linear-gradient(
+                135deg,
+                #8144f4,
+                #5425dc
+            );
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 14px;
+            box-shadow: 0 10px 25px rgba(91, 43, 220, 0.25);
+            transition: 0.3s ease;
+        }
+
+        .home-btn:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 15px 30px rgba(91, 43, 220, 0.4);
+        }
+
+        .home-btn:active {
+            transform: scale(0.97);
+        }
+
+        .home-icon {
+            font-size: 23px;
+        }
+
+        /* Mobile responsive */
+        @media (max-width: 600px) {
+            body {
+                padding: 15px;
+            }
+
+            .container {
+                padding: 40px 20px;
+                border-radius: 18px;
+            }
+
+            .error-code {
+                letter-spacing: 0;
+                margin-bottom: 25px;
+            }
+
+            h2 {
+                margin-bottom: 15px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+
+            .home-btn {
+                padding: 15px 22px;
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1 class="error-code">
+            4<span class="emoji">🧑‍🚀</span>4
+        </h1>
+
+        <h2>Oops! Page Not Found</h2>
+
+        <p>
+            The page you are looking for doesn't exist
+            or has been moved. Don't worry, it happens!
+        </p>
+
+        <a href="/" class="home-btn">
+            <span class="home-icon">⌂</span>
+            Go Back Home
+        </a>
+
+    </div>
+
+</body>
+</html>
